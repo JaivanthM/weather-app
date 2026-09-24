@@ -2,6 +2,8 @@
 
 A lightweight, browser-based weather application that fetches real-time weather data, displays condition-based visuals, and shows air quality information — all without any API key.
 
+**Live Project:** https://github.com/JaivanthM/weather-app
+
 ## Features
 
 - **City Search** — Type any city name and get instant weather results via the Open-Meteo Geocoding API.
@@ -19,17 +21,12 @@ A lightweight, browser-based weather application that fetches real-time weather 
 ## Project Structure
 
 ```
-weather-master/
-├── index.html        # Main weather app interface
-├── weather.css       # Styling
-├── weather.js        # Core logic — API calls, weather mapping, UI updates
-├── blanket.html      # Additional page
-├── heart.html        # Additional page
-├── inde.html         # Additional page
-├── index3.html       # Additional page
-├── weather.css       # Stylesheet
-├── *.png             # Weather condition images (sun, cloudy, rain, snow, fog, thunderstorm)
-└── .vscode/          # editor config
+weather-app/
+├── inde.html          # Main weather app interface
+├── weather.css        # Styling
+├── weather.js         # Core logic — API calls, weather mapping, UI updates
+├── *.png              # Weather condition images (sun, cloudy, rain, snow, fog, thunderstorm)
+└── .vscode/           # Editor config
 ```
 
 ## How It Works
@@ -50,7 +47,7 @@ weather-master/
 
 ## Usage
 
-Open `index.html` in any modern browser — no build step, no server required. Just type a city and hit search.
+Open `inde.html` in any modern browser — no build step, no server required. Just type a city and hit search.
 
 ## License
 
