@@ -1,0 +1,34 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: linear-gradient(315deg, rgb(238, 76, 12), #dfb600, #d9dbea, #f00808);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+#weather-container {
+    background: whitesmoke;
+    width: 300px;
+    border-radius: 10px;
+    text-align: center;
+    padding: 20px;
+    background: linear-gradient(135deg, #ff007f, #7928ca, #00dfd8, #d9dbea, #7928ca);
+    box-shadow: 0 15px 40px rgba(195, 0, 255, 0.685);
+}
+
+#city-input {
+    padding: 10px;
+    width: 200px;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+}
+
+#search-button {
+    padding: 10px;
+    border: none;
+    background-color: rgb(0, 162, 255);
+    color: white; 
+    border-radius: 5px;
+}
