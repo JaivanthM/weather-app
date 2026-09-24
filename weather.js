@@ -58,18 +58,6 @@ async function getWeather() {
         const weatherResponse = await fetch(weatherUrl);
         const weatherData = await weatherResponse.json();
 
-        const airQualityUrl = `https://air-quality-api.open-meteo.com/v1/air-quality?latitude=${latitude}&longitude=${longitude}&current=carbon_monoxide&hourly=carbon_monoxide&timezone=auto`;
-        const airQualityResponse = await fetch(airQualityUrl);
-        const airQualityData = await airQualityResponse.json();
-
-        const coValues = airQualityData.current?.carbon_monoxide != null
-            ? [airQualityData.current.carbon_monoxide]
-            : airQualityData.hourly?.carbon_monoxide || [];
-
-        const carbonMonoxide = Array.isArray(coValues) && coValues.length > 0 && Number.isFinite(coValues[coValues.length - 1])
-            ? coValues[coValues.length - 1]
-            : "N/A";
-
         const temperature = weatherData.current_weather.temperature;
         const windSpeed = weatherData.current_weather.windspeed;
         const weatherCode = weatherData.current_weather.weathercode;
@@ -80,5 +68,4 @@ async function getWeather() {
         document.getElementById("temperature").innerText = temperature;
         document.getElementById("weather-condition").innerText = weatherCondition;
         document.getElementById("wind-speed").innerText = windSpeed;
-        document.getElementById("CO-content").innerText = carbonMonoxide;
     }
